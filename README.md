@@ -1,14 +1,14 @@
-#Java Maps Exercise 1
+# Java Maps Exercise 1
 Java project made as an exercise for programming classes from my vocational training. Its main objective is to practice map (associative array in other programming languages) usage, interface implementing and file writing. Maven has been used in order to import JUnit dependencies (necessary to run the test class) more easily.
 
 These are the classes that were initially required:
 
-##Grades (interface)
+## Grades (interface)
 Only for practising interface implementation, with a single method.
 
 * void gimmeGrade(String dni) {/\* Search within the class' map a pupil with the given DNI and assign them a random grade between 0 and 10 \*/}
 
-##Pupil
+## Pupil
 Representing a pupil, it stores the following attributes:
 
 * int code //Their internal code
@@ -19,7 +19,7 @@ Representing a pupil, it stores the following attributes:
 
 There are two constructors for this class: one unparameterized and one parameterized, in which all attributes are set except the grade, which is, again, always initialized to 0. Getters and setters have been generated as needed.
 
-##PupilsGrades (implements Grades)
+## PupilsGrades (implements Grades)
 The project's main class, in a way, responsible for handling the pupils' data. It was required to implement (apart from gimmeGrade):
 
 * A LinkedHashMap with Strings as keys and ArrayLists of Pupils as values. The keys are provinces the pupil's are in.
@@ -34,7 +34,7 @@ That's achieved in the testing class, by creating a ByteArrayOutputStream that i
 
 The randomness of the pupil generating is the reason there's an ArrayList of Strings with provinces, which are read in the constructor and used later when creating a pupil. Plus, in order to get random names to test, I decided to create the following class inside "gendata" package, and add an attribute to the main class of that type:
 
-##NameGenerator
+## NameGenerator
 This class initializes taking two Lists of Files, one containing files with names, and the other containing files with surnames, all of which are always expected to be CSV files and have commas as separators. In fact, those lists are the ones PupilsGrades needs to initialize, as the NameGenerator in the class isn't created before hand.
 
 This class has to methods:
